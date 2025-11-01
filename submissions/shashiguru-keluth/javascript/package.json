@@ -1,0 +1,55 @@
+{
+  "name": "banking-client-modern",
+  "version": "1.0.0",
+  "description": "Modern JavaScript ES6+ Banking Client with async/await and fetch API",
+  "main": "bankingClient.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node bankingClient.js",
+    "demo": "node bankingClient.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:verbose": "jest --verbose --coverage"
+  },
+  "keywords": [
+    "banking",
+    "api-client",
+    "es6",
+    "async-await",
+    "fetch"
+  ],
+  "author": "Julius Baer Challenge Participant",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "bankingClient.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html",
+      "json"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 75,
+        "lines": 60,
+        "statements": 60
+      }
+    }
+  }
+}
